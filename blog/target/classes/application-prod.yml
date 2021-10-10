@@ -1,0 +1,39 @@
+server:
+  port: 9820
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: user
+    password: user
+    url: jdbc:mysql://localhost:3306/ninefox?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimeZone=Asia/Shanghai
+  redis:
+    database: 0
+    host: 101.132.145.235
+    port: 6379
+    password: redis6
+    connect-timeout: 10000
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 10
+        min-idle: 0
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: user-service
+    hostname: user-service
+  client:
+    service-url:
+      defaultZone: http://localhost:9800/eureka, http://localhost:9801/eureka, http://localhost:9802/eureka
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

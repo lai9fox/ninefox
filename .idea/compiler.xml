@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="component" />
+        <module name="eureka-1" />
+        <module name="eureka-3" />
+        <module name="eureka-2" />
+        <module name="project" />
+        <module name="blog" />
+        <module name="user" />
+        <module name="gateway" />
+        <module name="email" />
+        <module name="command" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="blog" options="-parameters" />
+      <module name="command" options="-parameters" />
+      <module name="component" options="-parameters" />
+      <module name="email" options="-parameters" />
+      <module name="eureka-1" options="-parameters" />
+      <module name="eureka-2" options="-parameters" />
+      <module name="eureka-3" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="project" options="-parameters" />
+      <module name="user" options="-parameters" />
+    </option>
+  </component>
+</project>

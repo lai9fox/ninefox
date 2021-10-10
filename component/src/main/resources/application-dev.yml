@@ -1,0 +1,32 @@
+server:
+  port: 9824
+
+spring:
+  application:
+    name: component-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: component
+    password: component
+    url: jdbc:mysql://localhost:3306/ninefox?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimeZone=Asia/Shanghai
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    service-url:
+      defaultZone: http://localhost:9800/eureka
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+feign:
+  client:
+    config:
+      default:
+        connetTimeout: 4000
+        readTimeout: 4000

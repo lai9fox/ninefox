@@ -1,0 +1,30 @@
+server:
+  port: 9821
+spring:
+  application:
+    name: email-service
+  redis:
+    database: 0
+    host: 101.132.145.235
+    port: 6379
+    password: redis6
+    connect-timeout: 10000
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 10
+        min-idle: 0
+  mail:
+    username: laijiuhu@qq.com
+    password: eeomkrlugkexbaei
+    host: smtp.qq.com
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9800/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: email-service
+
